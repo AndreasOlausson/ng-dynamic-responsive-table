@@ -1,0 +1,244 @@
+$green-01: #ecf8dd;
+$green-02: #e0f8c5;
+$green-04: #d1ed9a;
+$green-05: #b7d381;
+$green-08: #d0e2ad;
+$green-10: #c1f28c;
+$green-12: #a7dd74;
+$green-14: #a2c15d;
+$green-15: #80be50;
+$green-15-opacity-40: rgba(128, 190, 80, 0.4);
+$green-20: #65983d;
+$green-35: #55842e;
+$green-50: #457020;
+$green-20-opacity-40: rgba(101, 152, 61, 0.4);
+$green-10-opacity-80: rgba(193, 242, 140, 0.8);
+
+$grey-00: #eee;
+$grey-02: #F3F8FB;
+$grey-05: #eef3f6;
+$grey-10: #dee7ee;
+$grey-11: #d9e1e6;
+$grey-12: #d0d9e0;
+$grey-15: #a9bac7;
+$grey-16: #91a2b0;
+$grey-17: #778b9b;
+$grey-20: #435a6d;
+$grey-30: #113a4c;
+$grey-35: #082533;
+$grey-50: #000;
+$grey-50-opacity-40: rgba(0, 0, 0, 0.4);
+
+$blue-02: #f2faff;
+$blue-05: #dff3ff;
+$blue-10: #acdeff;
+$blue-12: #94c9eb;
+$blue-15: #66b2e2;
+$blue-20: #3d91c6;
+$blue-25: #0581D0;
+$blue-35: #2d83b9;
+$blue-50: #1e75ac;
+$blue-70: #115389;
+
+$blue-20-opacity-40: rgba(61, 145, 198, 0.4);
+
+$yellow-20: #f9c400;
+$yellow-30: #EFA30A;
+$yellow-35: #ff7800;
+
+$red-15: #fc5b3f;
+$red-20: #b33925;
+
+$white: #fff;
+$white-opacity-20: RGBA(255,255,255,0.2);
+$white-opacity-40: RGBA(255,255,255,0.4);
+$white-opacity-60: RGBA(255,255,255,0.6);
+$white-opacity-75: rgba(255,255,255,0.75);
+$white-opacity-80: RGBA(255,255,255,0.8);
+$white-opacity-95: RGBA(255,255,255,0.95);
+
+$black: #000;
+$black-opacity-30: rgba(0,0,0,0.3);
+$black-opacity-50: rgba(0,0,0,0.5);
+$black-opacity-60: rgba(0,0,0,0.6);
+
+
+.table-wrapper {
+  width: 80%;
+  background-color: antiquewhite;
+}
+
+table {
+  border-bottom: none !important;
+  vertical-align: middle;
+  width: 100%;
+  table-layout: auto;
+
+  .drt-info {
+    display: table-cell;
+
+    &.relative {
+      position: relative;
+    }
+  }
+
+  .drt-hide {
+    display: none;
+  }
+
+  .drt-show {
+    display: table-cell;
+    font-size: 12px;
+  }
+
+  .drt-info.drt-hide {
+    display: table-cell;
+  }
+
+  .drt-info.drt-show {
+    display: none;
+  }
+
+  .drt-always-hide {
+    display: none !important;
+  }
+
+  .drt-never-hide {
+    display: table-cell !important;
+  }
+
+
+
+  thead tr th, tbody tr td {
+
+
+    .drt-info {
+      background-color: skyblue
+    }
+
+    .drt-hide {
+      display: none;
+    }
+
+    .drt-show {
+      display: table-cell;
+    }
+
+    .drt-info.drt-hide {
+      display: table-cell;
+    }
+
+    .drt-info.drt-show {
+      display: none;
+    }
+  }
+
+  thead th, thead td {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+  tr {
+    height: 34px;
+    border-top: none;
+
+    &:hover {
+      background-color: $blue_05;
+    }
+
+    &.rowHover {
+      background-color: $blue_05;
+    }
+
+    &.hoverFx {
+      background-color: $blue_05;
+    }
+
+    &.ui-state-highlight {
+      background-color: $grey-05;
+
+      &.hoverFx {
+        background-color: $grey-10;
+      }
+    }
+
+    &.ui-state-highlight:hover {
+      background-color: $grey-10;
+    }
+
+    &.nohover {
+      cursor: default;
+      background: none;
+    }
+  }
+
+
+  tr th {
+    vertical-align: middle;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-left: none;
+    background: $grey-10;
+    border-right: 1px solid #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: $grey-20;
+    position: relative;
+    height: 35px;
+    padding: .25em .5em;
+    white-space: nowrap;
+
+    .ui-sortable-column {
+      background: $grey-15;
+      color: #fff;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &.sorting_desc, &.sorting_asc {
+      background: $grey-15;
+      color: white;
+    }
+
+    &.sorting_desc::after, &.sorting_asc::after {
+      background-size: 10px 10px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      content: 'Ö';
+      position: absolute;
+      top: 3px;
+      right: 4px;
+      height: 26px;
+      width: 26px;
+      -moz-transition: transform 500ms;
+      -o-transition: transform 500ms;
+      -webkit-transition: transform 500ms;
+      transition: transform 500ms;
+    }
+
+    &.sorting_asc::after {
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+
+  tr td {
+    vertical-align: middle;
+    padding: .25em .5em;
+
+    .ui-column-title {
+      display: none;
+    }
+  }
+
+
+}
+
+
